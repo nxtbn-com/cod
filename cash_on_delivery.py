@@ -4,13 +4,13 @@ from typing import Optional, Any
 from dataclasses import dataclass
 from rest_framework import serializers
 
-from nxtbn.payment.base_payment_gateway import BasePaymentGateway, PaymentResponse
+from nxtbn.payment.base import PaymentPlugin, PaymentResponse
 
 class CodPayloadSerializer(serializers.Serializer):
     """"Need to define at least a serialize, dummy as it is cod, no additional payload will come from payment gateway"""
     pass
 
-class CashOnDelivery(BasePaymentGateway):
+class CashOnDelivery(PaymentPlugin):
     """
     Implementation of a cash on delivery payment gateway.
 
