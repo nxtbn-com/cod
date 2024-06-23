@@ -18,6 +18,6 @@ metadata = {
 
 from . cash_on_delivery import CashOnDelivery
 
-gateway = CashOnDelivery
+plugin = CashOnDelivery
 
-__all__ = ['gateway']
+__all__ = ['plugin']
